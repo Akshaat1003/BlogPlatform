@@ -6,6 +6,7 @@
   <title>Create Blog | Blogbuzz</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+
   <!-- Optional: JS function to handle form submission -->
   <script>
     function handleFormSubmission(event) {
@@ -16,27 +17,27 @@
   </script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-          <h1>Blogbuzz</h1>
-          <nav>
-            <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="category.html">Categories</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>     
-          <div class="avatar-dropdown">
-            <img src="Images/AVATAR.png" alt="User Avatar" class="avatar" />
-            <div class="dropdown-menu">
-              <a href="#">Login</a>
-              <button id="darkModeToggle">Dark Mode</button>
-            </div>
-          </div>
+  <header>
+    <div class="container header-container">
+      <h1>Blogbuzz</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>     
+      <div class="avatar-dropdown">
+        <img src="Images/AVATAR.png" alt="User Avatar" class="avatar" />
+        <div class="dropdown-menu">
+          <a href="login.html">Login/Register</a>
+          <button id="darkModeToggle">Dark Mode</button>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="container">
@@ -70,7 +71,7 @@
   </section>
 
   <section>
-    <a href="blogs.html" class="back-button">← Back to Home</a>
+    <a href="blogs.html" class="back-button">← Back to Blogs</a>
   </section>
 
   <footer>
@@ -133,14 +134,5 @@
     </div>
   </footer>
   <a href="createblog.html" class="floating-create-btn" title="Create New Blog">+</a>
-  <script>
-    // Redirect the user to the homepage
-    window.onload = function() {
-      if (document.referrer.includes("blogs.html")) {
-        window.location.href = "index.html"; // Redirect to home page
-      }
-    };
-  </script>
-  
 </body>
 </html>

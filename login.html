@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Blogbuzz</title>
+  <title>Login / Register - Blogbuzz</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="light-mode">
+  <!-- NAVBAR -->
   <header>
     <div class="container header-container">
       <h1>Blogbuzz</h1>
@@ -22,53 +21,65 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>     
+      </nav>
       <div class="avatar-dropdown">
         <img src="Images/AVATAR.png" alt="User Avatar" class="avatar" />
         <div class="dropdown-menu">
-          <a href="login.html">Login/Register</a>
-          <button id="darkModeToggle">Dark Mode</button>
+            <a href="login.html">Login/Register</a>
+            <button id="darkModeToggle">Dark Mode</button>
         </div>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Our story, mission, and what drives this blog.</p>
+  <!-- AUTH SECTION -->
+  <section class="container auth-section">
+    <div class="auth-box fade">
+      <div class="form-toggle">
+        <button id="show-login" class="active">Login</button>
+        <button id="show-register">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="login-form" class="auth-form">
+        <h2 class="form-heading">Welcome Back</h2>
+        <input type="email" placeholder="Email" required class="input-field" />
+        <div class="password-wrapper">
+          <input type="password" placeholder="Password" class="password-field input-field" required />
+          <span class="toggle-password"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        
+        <div class="error-message hidden">Invalid login credentials.</div>
+        <div style="width: 100%;">
+            <button class="gradient-btn">Login</button>
+        </div>    
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="register-form" class="auth-form hidden">
+        <h2 class="form-heading">Create Account</h2>
+        <input type="text" placeholder="Full Name" required class="input-field" />
+        <input type="email" placeholder="Email" required class="input-field" />
+        <div class="password-wrapper">
+          <input type="password" placeholder="Password" class="password-field input-field" required />
+          <span class="toggle-password"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        <div class="error-message hidden">All fields must be filled out!</div>
+        <div style="width: 100%;">
+            <button class="gradient-btn">Register</button>
+        </div>      
+      </form>
     </div>
   </section>
 
-  <section class="about-section">
-    <div class="container">
-      <h3>Who We Are</h3>
-      <p>
-        Welcome to <strong>Blogbuzz</strong> – a place where stories are shared, tech is explored, and creativity flows.
-        This blog was started with a simple mission: to provide real, helpful, and inspiring content for curious minds like yours.
-      </p>
-
-      <h3>Why This Blog?</h3>
-      <p>
-        Whether you're here to learn something new, discover travel tips, or just enjoy a good read — we’ve got something for you.
-        Every post is written with thought and care, aiming to add value and spark ideas.
-      </p>
-
-      <h3>Meet the Creator</h3>
-      <p>
-        I'm Akshaat — a passionate writer, builder, and lifelong learner. I believe in the power of words and the web.
-        This blog is my digital home, and I’m glad you’re here.
-      </p>
-    </div>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
     <div class="footer-container">
       <div class="footer-section">
         <h4>About</h4>
         <p>Blogbuzz is your daily dose of tech, travel, and stories from around the world.</p>
       </div>
-  
+
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
@@ -78,7 +89,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-  
+
       <div class="footer-section">
         <h4>Contact</h4>
         <div class="contact-item">
@@ -106,7 +117,7 @@
             +91 789000XXXX
         </div>
       </div>
-  
+
       <div class="footer-section">
         <h4>Follow Us</h4>
         <p>
@@ -116,11 +127,10 @@
         </p>
       </div>
     </div>
-  
+
     <div class="footer-bottom">
       <p>&copy; 2025 BlogBuzz. All rights reserved.</p>
     </div>
   </footer>
-  <a href="createblog.html" class="floating-create-btn" title="Create New Blog">+</a>
 </body>
 </html>
