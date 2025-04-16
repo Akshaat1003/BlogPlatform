@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Blogbuzz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>Blogbuzz</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>     
+      <div class="avatar-dropdown">
+        <img src="Images/AVATAR.png" alt="User Avatar" class="avatar" />
+        <div class="dropdown-menu">
+          <a href="#">Login</a>
+          <button id="darkModeToggle">Dark Mode</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you!</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in touch</h3>
+        <p><strong>Email:</strong> akshaat0906.becse24@chitkara.edu.in</p>
+        <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About</h4>
+        <p>Blogbuzz is your daily dose of tech, travel, and stories from around the world.</p>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <div class="contact-item">
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:akshaat0906.becse24@chitkara.edu.in">
+            AKSHAAT A AGARWAL<br><br>
+          </a>
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:amber0916.becse24@chitkara.edu.in">
+            AMBER GUPTA
+          </a>
+        </div>
+        <div class="contact-item">
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:aarnav0889.becse24@chitkara.edu.in">
+            AARNAV SINGLA
+          </a>
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:anjali0922.becse24@chitkara.edu.in">
+            ANJALI RAI
+          </a>
+        </div><br>
+        <div class="contact-item">
+          <img src="Images/PHONE.png" width="20" alt="Phone Icon">
+            +91 789000XXXX
+        </div>
+      </div>
+  
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="#">Instagram</a> |
+          <a href="#">Twitter</a> |
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 BlogBuzz. All rights reserved.</p>
+    </div>
+  </footer>
+  <a href="createblog.html" class="floating-create-btn" title="Create New Blog">+</a>
+</body>
+</html>
