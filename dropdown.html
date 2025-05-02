@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blogbuzz | Dropdown</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+      color: #111827;
+    }
+
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover > a {
+      color: #38bdf8;
+    }
+
+    nav ul li ul {
+      position: absolute;
+      background-color: #1f2937;
+      padding: 10px;
+      display: none;
+      top: 100%;
+      left: 0;
+      border-radius: 6px;
+      min-width: 150px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      padding: 8px 12px;
+      display: block;
+      color: #f3f4f6;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #374151;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Blogbuzz</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Categories ▾</a>
+          <ul>
+            <li><a href="tech.html">Technology</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="finance.html">Finance</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Explore ▾</a>
+          <ul>
+            <li><a href="latest.html">Latest Blogs</a></li>
+            <li><a href="popular.html">Most Popular</a></li>
+            <li><a href="featured.html">Editor's Pick</a></li>
+          </ul>
+        </li>
+        <li><a href="create.html">Create</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Blogbuzz</h1>
+    <p>Browse categories and explore top blog picks using the dropdowns in the navigation bar. Share your own voice or discover amazing stories from around the world.</p>
+  </main>
+</body>
+</html>
