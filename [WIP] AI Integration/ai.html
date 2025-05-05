@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Blog Writer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      animation: popIn 0.8s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff0080;
+      animation: slideIn 0.6s ease-in-out;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border: 2px solid #ffb6c1;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ff0080;
+      box-shadow: 0 0 8px #ff00804f;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff0080, #7928ca);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(121, 40, 202, 0.4);
+    }
+
+    #loading {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+      animation: pulse 1.2s infinite;
+      display:none;
+    }
+
+    #output {
+      margin-top: 25px;
+      padding: 20px;
+      background: #fff5f8;
+      border-left: 4px solid #ff0080;
+      border-radius: 10px;
+      text-align: left;
+      white-space: pre-wrap;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 AI Blog Writer</h1>
+    <input type="text" id="topic" placeholder="Enter your blog topic...">
+    <button onclick="generateBlog()">Generate Blog</button>
+    <div id="loading">⏳ Generating content...</div>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    async function generateBlog() {
+      const topic = document.getElementById("topic").value;
+      const output = document.getElementById("output");
+      const loading = document.getElementById("loading");
+    
+      if (!topic.trim()) {
+        output.innerText = "⚠ Please enter a topic.";
+        return;
+      }
+    
+      loading.style.display = "block";
+      output.innerText = "";
+    
+      try {
+        const response = await fetch("http://localhost:3000/generate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ prompt: `Write a detailed blog post about: ${topic}` })
+        });
+    
+        const data = await response.json();
+        loading.style.display = "none";
+    
+        if (data.response) {
+          output.innerText = data.response;
+        } else {
+          output.innerText = "❌ Server gave an unexpected response.";
+        }
+    
+      } catch (err) {
+        loading.style.display = "none";
+        output.innerText = "❌ Error: " + err.message;
+        console.error("Client-side fetch error:", err);
+      }
+  }
+  </script>
+</body>
+</html>
