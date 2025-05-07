@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+<<<<<<< HEAD
 :root {
   --dark-coffee: #4B2E2B;
   --light-coffee: #D7C0AE;
@@ -28,6 +29,8 @@ body.dark-mode {
   background-color: var(--darker-coffee);
   color: var(--text-light);
 }
+=======
+>>>>>>> 222a2b9de58fc3974061a23ffa2acdc5e32ab3fe
 ::-webkit-scrollbar{
   display: none;
 }
@@ -40,11 +43,16 @@ body.dark-mode {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+<<<<<<< HEAD
   background: linear-gradient(to bottom right, #4B2E2B, #D7C0AE);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #333;
   transition: background-color 0.4s, color 0.4s;
+=======
+  background-color: #f4f4f4;
+  color: #0c0c0c;
+>>>>>>> 222a2b9de58fc3974061a23ffa2acdc5e32ab3fe
 }
 
 .container {
@@ -60,14 +68,22 @@ body {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 /* Header */
 header {
   background-color: #2F1B17; /* Dark coffee */
+=======
+header {
+  background-color: #222;
+>>>>>>> 222a2b9de58fc3974061a23ffa2acdc5e32ab3fe
   color: #fff;
   padding: 20px 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 222a2b9de58fc3974061a23ffa2acdc5e32ab3fe
 header h1 {
   margin: 0;
 }
@@ -715,6 +731,7 @@ body.dark-mode .posts article {
   20%, 60% { transform: translateX(-5px); }
   40%, 80% { transform: translateX(5px); }
 }
+<<<<<<< HEAD
 
 /* Animation Enhancements */
 @keyframes fadeIn {
@@ -902,3 +919,5 @@ body.dark-mode .posts article {
 .contact-section {
   background-color: #F4E1D2;
 }
+=======
+>>>>>>> 222a2b9de58fc3974061a23ffa2acdc5e32ab3fe
