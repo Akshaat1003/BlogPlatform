@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Register - Blogbuzz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="light-mode">
+  <!-- NAVBAR -->
+  <header>
+    <div class="container header-container">
+      <h1>Blogbuzz</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="avatar-dropdown">
+        <img src="Images/AVATAR.png" alt="User Avatar" class="avatar" />
+        <div class="dropdown-menu">
+            <a href="login.html">Login/Register</a>
+            <button id="darkModeToggle">Dark Mode</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTH SECTION -->
+  <section class="container auth-section">
+    <div class="auth-box fade">
+      <div class="form-toggle">
+        <button id="show-login" class="active">Login</button>
+        <button id="show-register">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="login-form" class="auth-form">
+        <h2 class="form-heading">Welcome Back</h2>
+        <input type="email" placeholder="Email" required class="input-field" />
+        <div class="password-wrapper">
+          <input type="password" placeholder="Password" class="password-field input-field" required />
+          <span class="toggle-password"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        
+        <div class="error-message hidden">Invalid login credentials.</div>
+        <div style="width: 100%;">
+            <button class="gradient-btn">Login</button>
+        </div>    
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="register-form" class="auth-form hidden">
+        <h2 class="form-heading">Create Account</h2>
+        <input type="text" placeholder="Full Name" required class="input-field" />
+        <input type="email" placeholder="Email" required class="input-field" />
+        <div class="password-wrapper">
+          <input type="password" placeholder="Password" class="password-field input-field" required />
+          <span class="toggle-password"><i class="fa-regular fa-eye"></i></span>
+        </div>
+        <div class="error-message hidden">All fields must be filled out!</div>
+        <div style="width: 100%;">
+            <button class="gradient-btn">Register</button>
+        </div>      
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About</h4>
+        <p>Blogbuzz is your daily dose of tech, travel, and stories from around the world.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <div class="contact-item">
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:akshaat0906.becse24@chitkara.edu.in">
+            AKSHAAT A AGARWAL<br><br>
+          </a>
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:amber0916.becse24@chitkara.edu.in">
+            AMBER GUPTA
+          </a>
+        </div>
+        <div class="contact-item">
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:aarnav0889.becse24@chitkara.edu.in">
+            AARNAV SINGLA
+          </a>
+          <img src="Images/GMAIL.png" width="20" alt="Email Icon">
+          <a href="mailto:anjali0922.becse24@chitkara.edu.in">
+            ANJALI RAI
+          </a>
+        </div><br>
+        <div class="contact-item">
+          <img src="Images/PHONE.png" width="20" alt="Phone Icon">
+            +91 789000XXXX
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="#">Instagram</a> |
+          <a href="#">Twitter</a> |
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 BlogBuzz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
